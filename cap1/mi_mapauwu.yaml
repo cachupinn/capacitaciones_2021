@@ -1,0 +1,100 @@
+# 5x5 counter-clockwise loop with a 4-way intersection in the middle
+# Designed to test the 4-way intersection tile and traffic light
+tiles:
+- [floor, floor, floor       , floor     , floor     , floor      , floor     , floor     , floor      , floor     , floor     , floor     , floor       , floor, floor]
+- [floor, floor, floor       , floor     , floor     , floor      , floor     , floor     , floor      , floor     , floor     , floor     , floor       , floor, floor]
+- [floor, floor, curve_left/W, straight/W, straight/W, 3way_left/W, straight/W, straight/W, 3way_left/W, straight/W, straight/W, straight/W, curve_left/N, floor, floor]
+- [floor, floor, straight/N  , grass     , grass     , straight/N , grass     , grass     , straight/N , water     , water     , water     , straight/N  , floor, floor]
+- [floor, floor, 3way_left/S , straight/W, straight/W, 3way_left/E, straight/W, straight/W, 3way_left/N, water     , water     , water     , straight/N  , floor, floor]
+- [floor, floor, straight/N  , grass     , grass     , grass      , grass     , grass     , 3way_left/S, straight/W, straight/W, straight/W, 3way_left/N , floor, floor]
+- [floor, floor, straight/N  , grass     , grass     , grass      , grass     , grass     , straight/N , grass     , grass     , grass     , straight/N  , floor, floor]
+- [floor, floor, curve_left/S, straight/W, straight/W, straight/W , straight/W, straight/W, 3way_left/E, straight/W, straight/W, straight/W, curve_left/E, floor, floor]
+- [floor, floor, floor       , floor     , floor     , floor      , floor     , floor     , floor      , floor     , floor     , floor     , floor       , floor, floor]
+- [floor, floor, floor       , floor     , floor     , floor      , floor     , floor     , floor      , floor     , floor     , floor     , floor       , floor, floor]
+
+objects:
+- kind: trafficlight
+  pos: [2.2, 2.2]
+  rotate: 45
+  height: 0.4
+  optional: true
+
+- kind: duckie
+  pos: [11.5, 3.5]
+  rotate: 45
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [9.5, 4.5]
+  rotate: 180
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [9.9, 6.2]
+  rotate: 180
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [11.6, 6.8]
+  rotate: 0
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [9.9, 3.9]
+  rotate: 45
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [10.9, 4.1]
+  rotate: 180
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [3.9, 3.5]
+  rotate: 180
+  height: 0.1
+  optional: true
+
+- kind: duckie
+  pos: [3.8, 5.8]
+  rotate: 0
+  height: 0.1
+  optional: true
+
+- kind: house
+  pos: [4.5, 5.8]
+  rotate: 0
+  height: 0.4
+  optional: true
+
+- kind: tree
+  pos: [3.5, 3.5]
+  rotate: 45
+  height: 0.5
+  optional: true
+
+- kind: tree
+  pos: [4.2, 3.1]
+  rotate: 0
+  height: 0.5
+  optional: true
+
+- kind: tree
+  pos: [10.7, 6.8]
+  rotate: 0
+  height: 0.5
+  optional: true
+
+- kind: bus
+  pos: [5.5, 5.5]
+  rotate: 180
+  height: 0.2
+  optional: true
+
+tile_size: 0.585
