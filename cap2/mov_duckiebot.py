@@ -58,15 +58,32 @@ while True:
     action = np.array([0.0, 0.0])
 
     # Definir acción en base a la tecla apretada
-
+    
     # Esto es avanzar recto hacia adelante al apretar la tecla w
     if key == ord('w'):
-        action = np.array([0.44, 0.0])
+        action = np.array([0.40, 0.0])
 
     ### AGREGAR MÁS COMPORTAMIENTOS ###
+    # Si el duckiebot quiere doblar a la izquierda
+    if key == ord("a"):
+        action = np.array([0.10, 0.20])
 
+    # Si el duckiebot quiere doblar a la derecha
+    if key == ord("d"):
+        action = np.array([0.10, -0.20])
 
-
+    # Si el duckiebot quiere retroceder
+    if key == ord("s"):
+        action = np.array([-0.20, 0])
+    
+    # Si el duckiebot quiere retroceder doblando hacia la izquierda
+    if key == ord("z"): 
+        action = np.array([-0.10, -0.20])
+    
+    # Si el duckiebot quiere retroceder doblando hacia la derecha
+    if key == ord("x"):
+        action = np.array([-0.10, 0.20])
+        
     # Se ejecuta la acción definida anteriormente y se retorna la observación (obs),
     # la evaluación (reward), etc
     obs, reward, done, info = env.step(action)
