@@ -101,6 +101,7 @@ if __name__ == '__main__':
         # Aplicar operaciones morfológicas para eliminar ruido
         # Esto corresponde a hacer un Opening
         # https://docs.opencv.org/trunk/d9/d61/tutorial_py_morphological_ops.html
+        
         #Operacion morfologica erode
         mask_out = cv2.erode(mask, kernel, iterations = 1)
         #Operacion morfologica dilate
