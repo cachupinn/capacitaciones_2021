@@ -125,7 +125,7 @@ if __name__ == '__main__':
         dbot_pos = env.cur_pos
         # Calcular distancia real entre posición del duckiebot y pato
         # esta distancia se utiliza para calcular la constante
-        dist = 2*((dbot_pos[0] - duck_pos[0])**2 + (dbot_pos[1] - duck_pos[1])**2 + (dbot_pos[2] - duck_pos[2])**2)**1/2
+        dist = ((dbot_pos[0] - duck_pos[0])**2 + (dbot_pos[1] - duck_pos[1])**2 + (dbot_pos[2] - duck_pos[2])**2)**(1/2)
         
         # La alerta se desactiva (opción por defecto)
         alert = False
